@@ -41,11 +41,11 @@ const HomePage = () => {
   return (
     <div className={classes.root}>
       <div className={classes.navContainer}>
-        {/* <Nav isLoading={isLoading} setIsLoading={setIsLoading} /> */}
+        <Nav isLoading={false} setIsLoading={setIsLoading} />
       </div>
 
       <div className={classes.image}>
-        <img src={nick} alt="logo" />
+        <img src={nick} alt="logo" className={classes.imageContent} />
       </div>
 
       <div className={classes.content}>

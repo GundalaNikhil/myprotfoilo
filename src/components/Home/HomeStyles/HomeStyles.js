@@ -10,7 +10,7 @@ export const useStyles = makeStyles((theme) => ({
       overflow: "hidden",
     },
     body: {
-      backgroundColor: "#282828",
+      backgfroundColor: "#282828",
     },
   },
   root: {
@@ -28,11 +28,23 @@ export const useStyles = makeStyles((theme) => ({
     width: "100%",
   },
   image: {
-    position: "absolute",
-    width: "150px", // Adjust size as needed
-    height: "150px", // Adjust size as needed
+    position: "fixed",
+    width: "25vw", // Maintains a responsive size relative to the viewport
+    height: "28vw",
     borderRadius: "50%",
-    zIndex: 1, // Ensure the image is above the buttons
+    zIndex: 1,
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    overflow: "hidden",
+    paddingTop: "calc(50% - 34vw)", // Centers the image dynamically
+    paddingLeft: "calc(50% - 13vw)",
+    paddingRight: "calc(50% - 20vw)",
+  },
+  imageContent: {
+    width: "100%",
+    height: "100%",
+    borderRadius: "50%",
   },
 
   content: {
@@ -51,48 +63,47 @@ export const useStyles = makeStyles((theme) => ({
     height: "50vw",
     maxWidth: "600px",
     maxHeight: "600px",
-    minWidth: "300px",
-    minHeight: "300px",
+    minWidth: "250px",
+    minHeight: "250px",
     borderRadius: "50%",
     margin: "auto",
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
+    zIndex: 2,
   },
 
   buttonItem: {
     position: "absolute",
-    width: "200px",
-    height: "100px",
+    width: "20vw", // Scales button width relative to the viewport
+    maxWidth: "200px",
+    height: "10vw", // Scales button height relative to the viewport
+    maxHeight: "100px",
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
     color: "#fff",
     transition: "transform 0.3s ease-in-out",
+    zIndex: 3,
+    fontSize: "calc(10px + 1vw)", // Responsive font size
   },
 
   aboutMeButton: {
-    transform:
-      "rotate(180deg) translateX(20px) translateY(200px) rotate(180deg)",
+    transform: "rotate(180deg) translate(0, 18vw) rotate(180deg)",
   },
   experienceButton: {
-    transform:
-      "rotate(60deg) translateX(75px) translateY(-260px) rotate(-60deg)",
+    transform: "rotate(65deg) translate(0, -18vw) rotate(-65deg)",
   },
   projectButton: {
-    transform:
-      "rotate(130deg) translateX(-70px) translateY(-290px) rotate(-130deg)",
+    transform: "rotate(100deg) translate(0, -18vw) rotate(-100deg)",
   },
   skillButton: {
-    transform:
-      "rotate(295deg) translateX(-70px) translateY(-290px) rotate(-295deg)",
+    transform: "rotate(298deg) translate(0, -18vw) rotate(-298deg)",
   },
   hobbyButton: {
-    transform:
-      "rotate(250deg) translateX(-30px) translateY(-300px) rotate(-250deg)",
+    transform: "rotate(258deg) translate(0, -18vw) rotate(-258deg)",
   },
   contactMeButton: {
-    transform:
-      "rotate(180deg) translateX(20px) translateY(-280px) rotate(-180deg)",
+    transform: "rotate(180deg) translate(0, -18vw) rotate(-180deg)",
   },
 }));
