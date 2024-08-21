@@ -1,0 +1,73 @@
+import { makeStyles } from "@mui/styles";
+
+export const useStyles = makeStyles((theme) => ({
+  button: {
+    position: "relative",
+    display: "inline-block",
+    justifyContent: "center",
+    alignItems: "center",
+    width: "200px",
+    height: "73px",
+    background: "transparent",
+    border: "none",
+    cursor: "pointer",
+    overflow: "hidden",
+    "&:hover $circle": {
+      opacity: 1,
+    },
+  },
+  container: {
+    position: "absolute",
+    top: 0,
+    left: 0,
+    width: "70%",
+    height: "100%",
+    pointerEvents: "none",
+  },
+  circle: {
+    position: "absolute",
+    left: "0%",
+    top: "50%",
+    transform: "translateY(-50%)",
+    width: "0",
+    height: "0",
+    border: "20px solid black",
+    borderRadius: "50%",
+    borderRightColor: "transparent",
+    opacity: 0,
+    transition: "opacity 0.3s ease",
+    animation: "$chomp .25s linear 0s infinite",
+    "$button:hover &": {
+      animation: "$chomp .25s linear 0s infinite, $move 4s linear 0s infinite",
+    },
+  },
+  span: {
+    position: "relative",
+    display: "block",
+    width: "100%",
+    fontSize: "15px",
+    fontWeight: 100,
+    letterSpacing: "3px",
+    textAlign: "center",
+    color: "white",
+    transition: "all 0.5s ease",
+    zIndex: 2,
+    "&:hover": {
+      color: "red",
+    },
+  },
+  "@keyframes chomp": {
+    "0%, 100%": { transform: "translateY(-50%) rotate(0deg)" },
+    "50%": { transform: "translateY(-50%) rotate(45deg)" },
+  },
+  "@keyframes move": {
+    "0%, 100%": { left: "0%", transform: "translateY(-50%) scaleX(1)" },
+    "25%": { left: "50%", transform: "translateY(-50%) scaleX(1)" },
+    "25.1%": { left: "50%", transform: "translateY(-50%) scaleX(1)" },
+    "50%": { left: "100%", transform: "translateY(-50%) scaleX(1)" },
+    "50.1%": { left: "100%", transform: "translateY(-50%) scaleX(-1)" },
+    "75%": { left: "50%", transform: "translateY(-50%) scaleX(-1)" },
+    "75.1%": { left: "50%", transform: "translateY(-50%) scaleX(-1)" },
+    "99.9%": { left: "0%", transform: "translateY(-50%) scaleX(-1)" },
+  },
+}));
