@@ -1,7 +1,8 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import HomePage from "./components/Home/HomePage";
-import { createTheme } from "@mui/material";
-import { ThemeProvider } from "@mui/styles";
+// import { createTheme } from "@mui/material";
+// import { ThemeProvider } from "@mui/styles";
+import { ThemeProvider, createTheme } from "@mui/material/styles";
 
 const theme = createTheme({});
 function App() {
