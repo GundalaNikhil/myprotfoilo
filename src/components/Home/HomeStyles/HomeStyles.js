@@ -106,4 +106,12 @@ export const useStyles = makeStyles((theme) => ({
   contactMeButton: {
     transform: "rotate(180deg) translate(0, -18vw) rotate(-180deg)",
   },
+
+  modalContent: {
+    position: "absolute",
+    top: "50%",
+    left: "50%",
+    transform: "translate(-50%, -50%)",
+    outline: "none",
+  },
 }));
